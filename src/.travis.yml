@@ -1,9 +1,0 @@
-language: csharp
-solution: CVSite.sln
-dotnet: 6.0.9
-install:
-  - nuget restore CVSite.sln
-  - nuget install NUnit.Console -Version 3.15.2 -OutputDirectory testrunner
-script:
-  - msbuild /p:Configuration=Release CVSite.sln
-  - mono ./testrunner/NUnit.ConsoleRunner.3.15.2/tools/nunit3-console.exe ./CVSite.Tests/bin/Release/CVSite.Tests.dll
