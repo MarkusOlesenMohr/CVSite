@@ -1,0 +1,57 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <UserSecretsId>fe87258b-08b5-4fe0-a585-9afb06a672e1</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="src\**" />
+    <Compile Remove="wwwroot\dist\**" />
+    <Content Remove="src\**" />
+    <Content Remove="wwwroot\dist\**" />
+    <EmbeddedResource Remove="src\**" />
+    <EmbeddedResource Remove="wwwroot\dist\**" />
+    <None Remove="src\**" />
+    <None Remove="wwwroot\dist\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="ClientApp\package-lock.json" />
+    <Content Remove="ClientApp\package.json" />
+    <Content Remove="ClientApp\tsconfig.config.json" />
+    <Content Remove="ClientApp\tsconfig.json" />
+    <Content Remove="package-lock.json" />
+    <Content Remove="package.json" />
+    <Content Remove="secrets.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove=".gitignore" />
+    <None Remove="ClientApp\.gitignore" />
+    <None Remove="ClientApp\README.md" />
+    <None Remove="postcss.config.cjs" />
+    <None Remove="README.md" />
+    <None Remove="tailwind.config.cjs" />
+    <None Remove="vite.config.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="6.0.1" />
+    <PackageReference Include="Serilog.AspNetCore" Version="6.0.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CVSite.Infrastructure\CVSite.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
