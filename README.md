@@ -12,4 +12,4 @@
 
 ### Clean Architecture with Mediatr and UnitOfWork/GenericRepository
 
-## travis-CI
+## travis-CI to run tests
