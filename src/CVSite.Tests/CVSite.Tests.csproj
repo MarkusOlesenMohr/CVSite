@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CVSite.DataLayer\CVSite.Application.csproj" />
+    <ProjectReference Include="..\CVSite.Application\CVSite.Application.csproj" />
     <ProjectReference Include="..\CVSite.Infrastructure\CVSite.Infrastructure.csproj" />
   </ItemGroup>
 
